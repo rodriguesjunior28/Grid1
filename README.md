@@ -4,3 +4,4 @@
   mas os itens também podem alterar o seu posicionamento; 
 - Os grids são divididos em colunas e linhas; 
 - Podemos inserir um espaçamento entre as áreas com o recurso de GAP;
+- 4 tipos de grids: alinhamento, itens individuais, template area e grid inicial

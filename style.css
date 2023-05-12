@@ -1,0 +1,130 @@
+/* esse CSS é do pirmeiro container no index */
+
+.container {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 50px auto 10%; /* Aqui divide em 3 colunas 1- 50px 2- auto 3- 10% */
+   height: 50vh;
+    grid-template-rows: 70% 30%;
+    gap: 5px; /* Altera espaçamento entre linhas e colunas */
+}
+
+.container div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+
+
+/* TEMPLATE AREA */
+.container1 {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px;  /*Altera espaçamento entre linhas e colunas */
+    grid-template-areas: 
+        'header header header header'
+        'sidebar content content content'  /* Tudo que mexo aqui afeta as id de baixo */
+        'footer footer footer footer';
+}
+
+.container1 div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+} 
+
+#header {
+    grid-area: header;
+    height: 50vh;  /* height é a altura de cada espaço */
+}
+
+#sidebar {
+    grid-area: sidebar;
+    height: 50vh;
+}
+
+#content {
+    grid-area: content;
+    height: 50vh;
+}
+
+#footer {
+    grid-area: footer;
+    height: 50vh;
+} 
+
+
+
+/* ALINHAMENTO */
+.container4 {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 50vh;
+    /* Alinha na horizontal */
+    justify-content: center; 
+    /* Alinhamento na vertical */
+    align-items: center;
+}
+
+.container4 div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+
+
+/* ITENS INDIVIDUAIS */
+.container3 {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.container3 div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+#item-1 {
+    /* Moldando na Horizontal */
+    grid-column-start: 1; 
+    grid-column-end: 4; /* coloco sempre 1 número a mais pra ele respeita um número a menos como no ARRAY */
+}
+
+#item-2 {
+    /* Moldando na Vertical */
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#item-3 {
+    /* Serve pra alinhar horizontal individual */
+    justify-self: end; /* fim */
+    height: 200px;
+}
+
+#item-5 {
+    justify-self: start; /* inicio */
+    height: 200px;
+}
+
+#item-4 {
+    /* Serve pra alinhar vertical individual */
+    align-self: center;
+}
+
+#item-6 {
+    align-self: end;
+} 
